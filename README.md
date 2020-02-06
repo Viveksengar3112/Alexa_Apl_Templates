@@ -7,8 +7,8 @@ Macde works to bring technology closer to people's lifestyle through voice syste
 
 # ALEXA APL TEMPLATES
 
-* [Game level](https://breakdance.github.io/breakdance/) - Game level design
-* [Avatar ](https://breakdance.github.io/breakdance/) - For Profile picture
+* [Game levels](https://github.com/getmohanraj95/Alexa_Apl_Templates/tree/master/Level) - Game level design
+* [Avatars](https://github.com/getmohanraj95/Alexa_Apl_Templates/tree/master/Avatar) - For Profile picture
 
 
 ### IMPORTANT :
