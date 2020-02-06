@@ -1,0 +1,1070 @@
+{
+  "type": "APL",
+  "version": "1.1",
+  "settings": {},
+  "theme": "dark",
+  "import": [],
+  "resources": [],
+  "styles": {},
+  "onMount": [],
+  "graphics": {},
+  "commands": {},
+  "layouts": {},
+  "mainTemplate": {
+    "parameters": [
+      "payload"
+    ],
+    "items": [
+      {
+        "type": "Container",
+        "width": "100vw",
+        "height": "100vh",
+        "items": [
+          {
+            "type": "Frame",
+            "width": "100vw",
+            "height": "100vh",
+            "backgroundColor": "white",
+            "items": [
+              {
+                "type": "Container",
+                "width": "100vw",
+                "height": "100vh",
+                "items": [
+                  {
+                    "type": "Text",
+                    "width": "100vw",
+                    "height": "10vh",
+                    "paddingLeft": "2vw",
+                    "textAlign": "auto",
+                    "textAlignVertical": "center",
+                    "color": "black",
+                    "fontStyle": "italic",
+                    "fontSize": "50dp",
+                    "text": "Select Your Level",
+                    "fontWeight": "bold"
+                  },
+                  {
+                    "type": "ScrollView",
+                    "width": "100vw",
+                    "height": "90vh",
+                    "position": "absolute",
+                    "top": "10vh",
+                    "items": [
+                      {
+                        "type": "Container",
+                        "width": "100vw",
+                        "direction": "column",
+                        "items": [
+                          {
+                            "type": "Frame",
+                            "width": "100vw",
+                            "height": "30vh",
+                            "backgroundColor": "white",
+                            "items": [
+                              {
+                                "type": "Container",
+                                "width": "100vw",
+                                "height": "30vh",
+                                "direction": "row",
+                                "items": [
+                                  {
+                                    "type": "Frame",
+                                    "width": "10vw",
+                                    "height": "20vh",
+                                    "position": "absolute",
+                                    "left": "12.5vw",
+                                    "top": "5vh",
+                                    "items": [
+                                      {
+                                        "type": "TouchWrapper",
+                                        "width": "10vw",
+                                        "height": "20vh",
+                                        "item": [
+                                          {
+                                            "type": "Container",
+                                            "width": "10vw",
+                                            "height": "20vh",
+                                            "item": [
+                                              {
+                                                "type": "Frame",
+                                                "width": "10vw",
+                                                "height": "15vh",
+                                                "position": "absolute",
+                                                "backgroundColor": "blue",
+                                                "borderRadius": "1vw"
+                                              },
+                                              {
+                                                "disabled": true,
+                                                "type": "Text",
+                                                "width": "10vw",
+                                                "height": "10vh",
+                                                "top": "2vh",
+                                                "textAlign": "center",
+                                                "textAlignVertical": "center",
+                                                "fontSize": "90dp",
+                                                "text": "1"
+                                              },
+                                              {
+                                                "type": "Container",
+                                                "width": "10vw",
+                                                "direction": "row",
+                                                "height": "5vh",
+                                                "top": "6vh",
+                                                "item": [
+                                                  {
+                                                    "display": "normal",
+                                                    "type": "Image",
+                                                    "width": "3vw",
+                                                    "height": "3vh",
+                                                    "source": "https://macdealexa.co.in/audio/connections/level/star.png",
+                                                    "scale": "best-fit"
+                                                  },
+                                                  {
+                                                    "type": "Image",
+                                                    "width": "3vw",
+                                                    "height": "3vh",
+                                                    "source": "https://macdealexa.co.in/audio/connections/level/empty.png",
+                                                    "scale": "best-fit"
+                                                  },
+                                                  {
+                                                    "type": "Image",
+                                                    "width": "3vw",
+                                                    "height": "3vh",
+                                                    "source": "https://macdealexa.co.in/audio/connections/level/empty.png",
+                                                    "scale": "best-fit"
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ],
+                                        "onPress": {
+                                          "type": "SendEvent",
+                                          "arguments": [
+                                            "level1"
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "Frame",
+                                    "width": "10vw",
+                                    "height": "20vh",
+                                    "position": "absolute",
+                                    "left": "32.5vw",
+                                    "top": "5vh",
+                                    "items": [
+                                      {
+                                        "type": "TouchWrapper",
+                                        "width": "10vw",
+                                        "height": "20vh",
+                                        "item": [
+                                          {
+                                            "type": "Container",
+                                            "width": "10vw",
+                                            "height": "20vh",
+                                            "item": [
+                                              {
+                                                "type": "Frame",
+                                                "width": "10vw",
+                                                "height": "15vh",
+                                                "position": "absolute",
+                                                "backgroundColor": "blue",
+                                                "borderRadius": "1vw"
+                                              },
+                                              {
+                                                "disabled": true,
+                                                "type": "Text",
+                                                "width": "10vw",
+                                                "height": "10vh",
+                                                "top": "2vh",
+                                                "textAlign": "center",
+                                                "textAlignVertical": "center",
+                                                "fontSize": "90dp",
+                                                "text": "2"
+                                              },
+                                              {
+                                                "type": "Container",
+                                                "width": "10vw",
+                                                "direction": "row",
+                                                "height": "5vh",
+                                                "top": "6vh",
+                                                "item": [
+                                                  {
+                                                    "type": "Image",
+                                                    "width": "3vw",
+                                                    "height": "3vh",
+                                                    "source": "https://macdealexa.co.in/audio/connections/level/star.png",
+                                                    "scale": "best-fit"
+                                                  },
+                                                  {
+                                                    "type": "Image",
+                                                    "width": "3vw",
+                                                    "height": "3vh",
+                                                    "source": "https://macdealexa.co.in/audio/connections/level/star.png",
+                                                    "scale": "best-fit"
+                                                  },
+                                                  {
+                                                    "type": "Image",
+                                                    "width": "3vw",
+                                                    "height": "3vh",
+                                                    "source": "https://macdealexa.co.in/audio/connections/level/empty.png",
+                                                    "scale": "best-fit"
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ],
+                                        "onPress": {
+                                          "type": "SendEvent",
+                                          "arguments": [
+                                            "level2"
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "Frame",
+                                    "width": "10vw",
+                                    "height": "20vh",
+                                    "position": "absolute",
+                                    "left": "52.5vw",
+                                    "top": "5vh",
+                                    "items": [
+                                      {
+                                        "type": "TouchWrapper",
+                                        "width": "10vw",
+                                        "height": "20vh",
+                                        "item": [
+                                          {
+                                            "type": "Container",
+                                            "width": "10vw",
+                                            "height": "20vh",
+                                            "item": [
+                                              {
+                                                "type": "Frame",
+                                                "width": "10vw",
+                                                "height": "15vh",
+                                                "position": "absolute",
+                                                "backgroundColor": "blue",
+                                                "borderRadius": "1vw"
+                                              },
+                                              {
+                                                "disabled": true,
+                                                "type": "Text",
+                                                "width": "10vw",
+                                                "height": "10vh",
+                                                "top": "2vh",
+                                                "textAlign": "center",
+                                                "textAlignVertical": "center",
+                                                "fontSize": "90dp",
+                                                "text": "3"
+                                              },
+                                              {
+                                                "type": "Container",
+                                                "width": "10vw",
+                                                "direction": "row",
+                                                "height": "5vh",
+                                                "top": "6vh",
+                                                "item": [
+                                                  {
+                                                    "type": "Image",
+                                                    "width": "3vw",
+                                                    "height": "3vh",
+                                                    "source": "https://macdealexa.co.in/audio/connections/level/star.png",
+                                                    "scale": "best-fit"
+                                                  },
+                                                  {
+                                                    "type": "Image",
+                                                    "width": "3vw",
+                                                    "height": "3vh",
+                                                    "source": "https://macdealexa.co.in/audio/connections/level/star.png",
+                                                    "scale": "best-fit"
+                                                  },
+                                                  {
+                                                    "type": "Image",
+                                                    "width": "3vw",
+                                                    "height": "3vh",
+                                                    "source": "https://macdealexa.co.in/audio/connections/level/empty.png",
+                                                    "scale": "best-fit"
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ],
+                                        "onPress": {
+                                          "type": "SendEvent",
+                                          "arguments": [
+                                            "level3"
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "Frame",
+                                    "width": "10vw",
+                                    "height": "20vh",
+                                    "position": "absolute",
+                                    "left": "72.5vw",
+                                    "top": "5vh",
+                                    "items": [
+                                      {
+                                        "type": "TouchWrapper",
+                                        "width": "10vw",
+                                        "height": "20vh",
+                                        "item": [
+                                          {
+                                            "type": "Container",
+                                            "width": "10vw",
+                                            "height": "20vh",
+                                            "item": [
+                                              {
+                                                "type": "Frame",
+                                                "width": "10vw",
+                                                "height": "15vh",
+                                                "position": "absolute",
+                                                "backgroundColor": "blue",
+                                                "borderRadius": "1vw"
+                                              },
+                                              {
+                                                "disabled": true,
+                                                "type": "Text",
+                                                "width": "10vw",
+                                                "height": "10vh",
+                                                "top": "2vh",
+                                                "textAlign": "center",
+                                                "textAlignVertical": "center",
+                                                "fontSize": "90dp",
+                                                "text": "4"
+                                              },
+                                              {
+                                                "type": "Container",
+                                                "width": "10vw",
+                                                "direction": "row",
+                                                "height": "5vh",
+                                                "top": "6vh",
+                                                "item": [
+                                                  {
+                                                    "type": "Image",
+                                                    "width": "3vw",
+                                                    "height": "3vh",
+                                                    "source": "https://macdealexa.co.in/audio/connections/level/star.png",
+                                                    "scale": "best-fit"
+                                                  },
+                                                  {
+                                                    "type": "Image",
+                                                    "width": "3vw",
+                                                    "height": "3vh",
+                                                    "source": "https://macdealexa.co.in/audio/connections/level/star.png",
+                                                    "scale": "best-fit"
+                                                  },
+                                                  {
+                                                    "type": "Image",
+                                                    "width": "3vw",
+                                                    "height": "3vh",
+                                                    "source": "https://macdealexa.co.in/audio/connections/level/empty.png",
+                                                    "scale": "best-fit"
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ],
+                                        "onPress": {
+                                          "type": "SendEvent",
+                                          "arguments": [
+                                            "level4"
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "type": "Frame",
+                            "width": "100vw",
+                            "height": "30vh",
+                            "backgroundColor": "white",
+                            "items": [
+                              {
+                                "type": "Container",
+                                "width": "100vw",
+                                "height": "30vh",
+                                "direction": "row",
+                                "items": [
+                                  {
+                                    "type": "Frame",
+                                    "width": "10vw",
+                                    "height": "20vh",
+                                    "position": "absolute",
+                                    "left": "12.5vw",
+                                    "top": "5vh",
+                                    "items": [
+                                      {
+                                        "type": "TouchWrapper",
+                                        "width": "10vw",
+                                        "height": "20vh",
+                                        "item": [
+                                          {
+                                            "type": "Container",
+                                            "width": "10vw",
+                                            "height": "20vh",
+                                            "item": [
+                                              {
+                                                "type": "Frame",
+                                                "width": "10vw",
+                                                "height": "15vh",
+                                                "position": "absolute",
+                                                "backgroundColor": "blue",
+                                                "borderRadius": "1vw"
+                                              },
+                                              {
+                                                "disabled": true,
+                                                "type": "Text",
+                                                "width": "10vw",
+                                                "height": "10vh",
+                                                "top": "2vh",
+                                                "textAlign": "center",
+                                                "textAlignVertical": "center",
+                                                "fontSize": "90dp",
+                                                "text": "5"
+                                              },
+                                              {
+                                                "type": "Container",
+                                                "width": "10vw",
+                                                "direction": "row",
+                                                "height": "5vh",
+                                                "top": "6vh",
+                                                "item": [
+                                                  {
+                                                    "display": "normal",
+                                                    "type": "Image",
+                                                    "width": "3vw",
+                                                    "height": "3vh",
+                                                    "source": "https://macdealexa.co.in/audio/connections/level/star.png",
+                                                    "scale": "best-fit"
+                                                  },
+                                                  {
+                                                    "type": "Image",
+                                                    "width": "3vw",
+                                                    "height": "3vh",
+                                                    "source": "https://macdealexa.co.in/audio/connections/level/empty.png",
+                                                    "scale": "best-fit"
+                                                  },
+                                                  {
+                                                    "type": "Image",
+                                                    "width": "3vw",
+                                                    "height": "3vh",
+                                                    "source": "https://macdealexa.co.in/audio/connections/level/empty.png",
+                                                    "scale": "best-fit"
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ],
+                                        "onPress": {
+                                          "type": "SendEvent",
+                                          "arguments": [
+                                            "level5"
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "Frame",
+                                    "width": "10vw",
+                                    "height": "20vh",
+                                    "position": "absolute",
+                                    "left": "32.5vw",
+                                    "top": "5vh",
+                                    "items": [
+                                      {
+                                        "type": "TouchWrapper",
+                                        "width": "10vw",
+                                        "height": "20vh",
+                                        "item": [
+                                          {
+                                            "type": "Container",
+                                            "width": "10vw",
+                                            "height": "20vh",
+                                            "item": [
+                                              {
+                                                "type": "Frame",
+                                                "width": "10vw",
+                                                "height": "15vh",
+                                                "position": "absolute",
+                                                "backgroundColor": "blue",
+                                                "borderRadius": "1vw"
+                                              },
+                                              {
+                                                "disabled": true,
+                                                "type": "Text",
+                                                "width": "10vw",
+                                                "height": "10vh",
+                                                "top": "2vh",
+                                                "textAlign": "center",
+                                                "textAlignVertical": "center",
+                                                "fontSize": "90dp",
+                                                "text": "6"
+                                              },
+                                              {
+                                                "type": "Container",
+                                                "width": "10vw",
+                                                "direction": "row",
+                                                "height": "5vh",
+                                                "top": "6vh",
+                                                "item": [
+                                                  {
+                                                    "type": "Image",
+                                                    "width": "3vw",
+                                                    "height": "3vh",
+                                                    "source": "https://macdealexa.co.in/audio/connections/level/star.png",
+                                                    "scale": "best-fit"
+                                                  },
+                                                  {
+                                                    "type": "Image",
+                                                    "width": "3vw",
+                                                    "height": "3vh",
+                                                    "source": "https://macdealexa.co.in/audio/connections/level/star.png",
+                                                    "scale": "best-fit"
+                                                  },
+                                                  {
+                                                    "type": "Image",
+                                                    "width": "3vw",
+                                                    "height": "3vh",
+                                                    "source": "https://macdealexa.co.in/audio/connections/level/empty.png",
+                                                    "scale": "best-fit"
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ],
+                                        "onPress": {
+                                          "type": "SendEvent",
+                                          "arguments": [
+                                            "level6"
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "Frame",
+                                    "width": "10vw",
+                                    "height": "20vh",
+                                    "position": "absolute",
+                                    "left": "52.5vw",
+                                    "top": "5vh",
+                                    "items": [
+                                      {
+                                        "type": "TouchWrapper",
+                                        "width": "10vw",
+                                        "height": "20vh",
+                                        "item": [
+                                          {
+                                            "type": "Container",
+                                            "width": "10vw",
+                                            "height": "20vh",
+                                            "item": [
+                                              {
+                                                "type": "Frame",
+                                                "width": "10vw",
+                                                "height": "15vh",
+                                                "position": "absolute",
+                                                "backgroundColor": "blue",
+                                                "borderRadius": "1vw"
+                                              },
+                                              {
+                                                "disabled": true,
+                                                "type": "Text",
+                                                "width": "10vw",
+                                                "height": "10vh",
+                                                "top": "2vh",
+                                                "textAlign": "center",
+                                                "textAlignVertical": "center",
+                                                "fontSize": "90dp",
+                                                "text": "7"
+                                              },
+                                              {
+                                                "type": "Container",
+                                                "width": "10vw",
+                                                "direction": "row",
+                                                "height": "5vh",
+                                                "top": "6vh",
+                                                "item": [
+                                                  {
+                                                    "type": "Image",
+                                                    "width": "3vw",
+                                                    "height": "3vh",
+                                                    "source": "https://macdealexa.co.in/audio/connections/level/star.png",
+                                                    "scale": "best-fit"
+                                                  },
+                                                  {
+                                                    "type": "Image",
+                                                    "width": "3vw",
+                                                    "height": "3vh",
+                                                    "source": "https://macdealexa.co.in/audio/connections/level/star.png",
+                                                    "scale": "best-fit"
+                                                  },
+                                                  {
+                                                    "type": "Image",
+                                                    "width": "3vw",
+                                                    "height": "3vh",
+                                                    "source": "https://macdealexa.co.in/audio/connections/level/empty.png",
+                                                    "scale": "best-fit"
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ],
+                                        "onPress": {
+                                          "type": "SendEvent",
+                                          "arguments": [
+                                            "level7"
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "Frame",
+                                    "width": "10vw",
+                                    "height": "20vh",
+                                    "position": "absolute",
+                                    "left": "72.5vw",
+                                    "top": "5vh",
+                                    "items": [
+                                      {
+                                        "type": "TouchWrapper",
+                                        "width": "10vw",
+                                        "height": "20vh",
+                                        "item": [
+                                          {
+                                            "type": "Container",
+                                            "width": "10vw",
+                                            "height": "20vh",
+                                            "item": [
+                                              {
+                                                "type": "Frame",
+                                                "width": "10vw",
+                                                "height": "15vh",
+                                                "position": "absolute",
+                                                "backgroundColor": "blue",
+                                                "borderRadius": "1vw"
+                                              },
+                                              {
+                                                "disabled": true,
+                                                "type": "Text",
+                                                "width": "10vw",
+                                                "height": "10vh",
+                                                "top": "2vh",
+                                                "textAlign": "center",
+                                                "textAlignVertical": "center",
+                                                "fontSize": "90dp",
+                                                "text": "8"
+                                              },
+                                              {
+                                                "type": "Container",
+                                                "width": "10vw",
+                                                "direction": "row",
+                                                "height": "5vh",
+                                                "top": "6vh",
+                                                "item": [
+                                                  {
+                                                    "type": "Image",
+                                                    "width": "3vw",
+                                                    "height": "3vh",
+                                                    "source": "https://macdealexa.co.in/audio/connections/level/star.png",
+                                                    "scale": "best-fit"
+                                                  },
+                                                  {
+                                                    "type": "Image",
+                                                    "width": "3vw",
+                                                    "height": "3vh",
+                                                    "source": "https://macdealexa.co.in/audio/connections/level/star.png",
+                                                    "scale": "best-fit"
+                                                  },
+                                                  {
+                                                    "type": "Image",
+                                                    "width": "3vw",
+                                                    "height": "3vh",
+                                                    "source": "https://macdealexa.co.in/audio/connections/level/empty.png",
+                                                    "scale": "best-fit"
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ],
+                                        "onPress": {
+                                          "type": "SendEvent",
+                                          "arguments": [
+                                            "level8"
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "type": "Frame",
+                            "width": "100vw",
+                            "height": "30vh",
+                            "backgroundColor": "white",
+                            "items": [
+                              {
+                                "type": "Container",
+                                "width": "100vw",
+                                "height": "30vh",
+                                "direction": "row",
+                                "items": [
+                                  {
+                                    "type": "Frame",
+                                    "width": "10vw",
+                                    "height": "20vh",
+                                    "position": "absolute",
+                                    "left": "12.5vw",
+                                    "top": "5vh",
+                                    "items": [
+                                      {
+                                        "type": "TouchWrapper",
+                                        "width": "10vw",
+                                        "height": "20vh",
+                                        "item": [
+                                          {
+                                            "type": "Container",
+                                            "width": "10vw",
+                                            "height": "20vh",
+                                            "item": [
+                                              {
+                                                "type": "Frame",
+                                                "width": "10vw",
+                                                "height": "15vh",
+                                                "position": "absolute",
+                                                "backgroundColor": "blue",
+                                                "borderRadius": "1vw"
+                                              },
+                                              {
+                                                "disabled": true,
+                                                "type": "Text",
+                                                "width": "10vw",
+                                                "height": "10vh",
+                                                "top": "2vh",
+                                                "textAlign": "center",
+                                                "textAlignVertical": "center",
+                                                "fontSize": "90dp",
+                                                "text": "9"
+                                              },
+                                              {
+                                                "type": "Container",
+                                                "width": "10vw",
+                                                "direction": "row",
+                                                "height": "5vh",
+                                                "top": "6vh",
+                                                "item": [
+                                                  {
+                                                    "display": "normal",
+                                                    "type": "Image",
+                                                    "width": "3vw",
+                                                    "height": "3vh",
+                                                    "source": "https://macdealexa.co.in/audio/connections/level/star.png",
+                                                    "scale": "best-fit"
+                                                  },
+                                                  {
+                                                    "type": "Image",
+                                                    "width": "3vw",
+                                                    "height": "3vh",
+                                                    "source": "https://macdealexa.co.in/audio/connections/level/empty.png",
+                                                    "scale": "best-fit"
+                                                  },
+                                                  {
+                                                    "type": "Image",
+                                                    "width": "3vw",
+                                                    "height": "3vh",
+                                                    "source": "https://macdealexa.co.in/audio/connections/level/empty.png",
+                                                    "scale": "best-fit"
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ],
+                                        "onPress": {
+                                          "type": "SendEvent",
+                                          "arguments": [
+                                            "level9"
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "Frame",
+                                    "width": "10vw",
+                                    "height": "20vh",
+                                    "position": "absolute",
+                                    "left": "32.5vw",
+                                    "top": "5vh",
+                                    "items": [
+                                      {
+                                        "type": "TouchWrapper",
+                                        "width": "10vw",
+                                        "height": "20vh",
+                                        "item": [
+                                          {
+                                            "type": "Container",
+                                            "width": "10vw",
+                                            "height": "20vh",
+                                            "item": [
+                                              {
+                                                "type": "Frame",
+                                                "width": "10vw",
+                                                "height": "15vh",
+                                                "position": "absolute",
+                                                "backgroundColor": "blue",
+                                                "borderRadius": "1vw"
+                                              },
+                                              {
+                                                "disabled": true,
+                                                "type": "Text",
+                                                "width": "10vw",
+                                                "height": "10vh",
+                                                "top": "2vh",
+                                                "textAlign": "center",
+                                                "textAlignVertical": "center",
+                                                "fontSize": "90dp",
+                                                "text": "10"
+                                              },
+                                              {
+                                                "type": "Container",
+                                                "width": "10vw",
+                                                "direction": "row",
+                                                "height": "5vh",
+                                                "top": "6vh",
+                                                "item": [
+                                                  {
+                                                    "type": "Image",
+                                                    "width": "3vw",
+                                                    "height": "3vh",
+                                                    "source": "https://macdealexa.co.in/audio/connections/level/star.png",
+                                                    "scale": "best-fit"
+                                                  },
+                                                  {
+                                                    "type": "Image",
+                                                    "width": "3vw",
+                                                    "height": "3vh",
+                                                    "source": "https://macdealexa.co.in/audio/connections/level/star.png",
+                                                    "scale": "best-fit"
+                                                  },
+                                                  {
+                                                    "type": "Image",
+                                                    "width": "3vw",
+                                                    "height": "3vh",
+                                                    "source": "https://macdealexa.co.in/audio/connections/level/empty.png",
+                                                    "scale": "best-fit"
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ],
+                                        "onPress": {
+                                          "type": "SendEvent",
+                                          "arguments": [
+                                            "level10"
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "Frame",
+                                    "width": "10vw",
+                                    "height": "20vh",
+                                    "position": "absolute",
+                                    "left": "52.5vw",
+                                    "top": "5vh",
+                                    "items": [
+                                      {
+                                        "type": "TouchWrapper",
+                                        "width": "10vw",
+                                        "height": "20vh",
+                                        "item": [
+                                          {
+                                            "type": "Container",
+                                            "width": "10vw",
+                                            "height": "20vh",
+                                            "item": [
+                                              {
+                                                "type": "Frame",
+                                                "width": "10vw",
+                                                "height": "15vh",
+                                                "position": "absolute",
+                                                "backgroundColor": "blue",
+                                                "borderRadius": "1vw"
+                                              },
+                                              {
+                                                "disabled": true,
+                                                "type": "Text",
+                                                "width": "10vw",
+                                                "height": "10vh",
+                                                "top": "2vh",
+                                                "textAlign": "center",
+                                                "textAlignVertical": "center",
+                                                "fontSize": "90dp",
+                                                "text": "11"
+                                              },
+                                              {
+                                                "type": "Container",
+                                                "width": "10vw",
+                                                "direction": "row",
+                                                "height": "5vh",
+                                                "top": "6vh",
+                                                "item": [
+                                                  {
+                                                    "type": "Image",
+                                                    "width": "3vw",
+                                                    "height": "3vh",
+                                                    "source": "https://macdealexa.co.in/audio/connections/level/star.png",
+                                                    "scale": "best-fit"
+                                                  },
+                                                  {
+                                                    "type": "Image",
+                                                    "width": "3vw",
+                                                    "height": "3vh",
+                                                    "source": "https://macdealexa.co.in/audio/connections/level/star.png",
+                                                    "scale": "best-fit"
+                                                  },
+                                                  {
+                                                    "type": "Image",
+                                                    "width": "3vw",
+                                                    "height": "3vh",
+                                                    "source": "https://macdealexa.co.in/audio/connections/level/empty.png",
+                                                    "scale": "best-fit"
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ],
+                                        "onPress": {
+                                          "type": "SendEvent",
+                                          "arguments": [
+                                            "level11"
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "Frame",
+                                    "width": "10vw",
+                                    "height": "20vh",
+                                    "position": "absolute",
+                                    "left": "72.5vw",
+                                    "top": "5vh",
+                                    "items": [
+                                      {
+                                        "type": "TouchWrapper",
+                                        "width": "10vw",
+                                        "height": "20vh",
+                                        "item": [
+                                          {
+                                            "type": "Container",
+                                            "width": "10vw",
+                                            "height": "20vh",
+                                            "item": [
+                                              {
+                                                "type": "Frame",
+                                                "width": "10vw",
+                                                "height": "15vh",
+                                                "position": "absolute",
+                                                "backgroundColor": "blue",
+                                                "borderRadius": "1vw"
+                                              },
+                                              {
+                                                "disabled": true,
+                                                "type": "Text",
+                                                "width": "10vw",
+                                                "height": "10vh",
+                                                "top": "2vh",
+                                                "textAlign": "center",
+                                                "textAlignVertical": "center",
+                                                "fontSize": "90dp",
+                                                "text": "12"
+                                              },
+                                              {
+                                                "type": "Container",
+                                                "width": "10vw",
+                                                "direction": "row",
+                                                "height": "5vh",
+                                                "top": "6vh",
+                                                "item": [
+                                                  {
+                                                    "type": "Image",
+                                                    "width": "3vw",
+                                                    "height": "3vh",
+                                                    "source": "https://macdealexa.co.in/audio/connections/level/star.png",
+                                                    "scale": "best-fit"
+                                                  },
+                                                  {
+                                                    "type": "Image",
+                                                    "width": "3vw",
+                                                    "height": "3vh",
+                                                    "source": "https://macdealexa.co.in/audio/connections/level/star.png",
+                                                    "scale": "best-fit"
+                                                  },
+                                                  {
+                                                    "type": "Image",
+                                                    "width": "3vw",
+                                                    "height": "3vh",
+                                                    "source": "https://macdealexa.co.in/audio/connections/level/empty.png",
+                                                    "scale": "best-fit"
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ],
+                                        "onPress": {
+                                          "type": "SendEvent",
+                                          "arguments": [
+                                            "level12"
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,864 @@
+{
+    "type": "APL",
+    "version": "1.1",
+    "settings": {},
+    "theme": "dark",
+    "import": [
+        {
+            "name": "alexa-viewport-profiles",
+            "version": "1.1.0"
+        }
+    ],
+    "resources": [],
+    "styles": {},
+    "onMount": [],
+    "graphics": {},
+    "commands": {},
+    "layouts": {
+        "avatar": {
+            "parameters": [
+                "number",
+                "imageUrl"
+            ],
+            "items": [
+                {
+                    "type": "Frame",
+                    "width": "20vw",
+                    "height": "43vh",
+                    "backgroundColor": "white",
+                    "borderRadius": "1vw",
+                    "borderWidth": "0.5vw",
+                    "top": "1vh",
+                    "left": "10vw",
+                    "items": [
+                        {
+                            "type": "TouchWrapper",
+                            "width": "18vw",
+                            "height": "40vh",
+                            "item": {
+                                "type": "Container",
+                                "width": "18vw",
+                                "height": "43vh",
+                                "paddingLeft": "0.5vw",
+                                "items": [
+                                    {
+                                        "type": "Image",
+                                        "width": "18vw",
+                                        "height": "30vh",
+                                        "source": "${imageUrl}",
+                                        "scale": "best-fill"
+                                    },
+                                    {
+                                        "when": "${@viewportProfile == @hubLandscapeMedium ||  @viewportProfile == @hubLandscapeLarge}",
+                                        "type": "Text",
+                                        "alignSelf": "center",
+                                        "position": "absolute",
+                                        "textAlign": "center",
+                                        "textAlignVertical": "center",
+                                        "color": "black",
+                                        "fontStyle": "normal",
+                                        "fontSize": "60dp",
+                                        "text": "${number}",
+                                        "top": "30vh"
+                                    },
+                                    {
+                                        "when": "${@viewportProfile == @hubLandscapeSmall}",
+                                        "type": "Text",
+                                        "alignSelf": "center",
+                                        "position": "absolute",
+                                        "textAlign": "center",
+                                        "textAlignVertical": "center",
+                                        "color": "black",
+                                        "fontStyle": "normal",
+                                        "fontSize": "50dp",
+                                        "text": "${number}",
+                                        "top": "30vh"
+                                    }
+                                ]
+                            },
+                            "onPress": {
+                                "type": "SendEvent",
+                                "arguments": [
+                                    "avatar",
+                                    "${imageUrl}"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "mainTemplate": {
+        "parameters": [
+            "payload"
+        ],
+        "items": [
+            {
+                "type": "Frame",
+                "width": "100vw",
+                "height": "100vh",
+                "backgroundColor": "white",
+                "items": [
+                    {
+                        "type": "Container",
+                        "width": "100vw",
+                        "height": "100vh",
+                        "items": [
+                            {
+                                "type": "Text",
+                                "width": "100vw",
+                                "height": "10vh",
+                                "paddingLeft": "2vw",
+                                "textAlign": "auto",
+                                "textAlignVertical": "center",
+                                "color": "black",
+                                "fontStyle": "italic",
+                                "fontSize": "50dp",
+                                "text": "Select Your Avatar",
+                                "fontWeight": "bold"
+                            },
+                            {
+                                "when": "${@viewportProfile == @hubLandscapeMedium ||  @viewportProfile == @hubLandscapeLarge || @viewportProfile == @hubLandscapeSmall}",
+                                "type": "ScrollView",
+                                "width": "100vw",
+                                "position": "absolute",
+                                "top": "10vh",
+                                "height": "100vh",
+                                "items": [
+                                    {
+                                        "type": "Container",
+                                        "width": "100vw",
+                                        "direction": "column",
+                                        "items": [
+                                            {
+                                                "type": "Frame",
+                                                "width": "100vw",
+                                                "height": "45vh",
+                                                "backgroundColor": "white",
+                                                "items": [
+                                                    {
+                                                        "type": "Container",
+                                                        "direction": "row",
+                                                        "width": "100vw",
+                                                        "height": "45vh",
+                                                        "items": [
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "1",
+                                                                "imageUrl": "${s3url}"
+                                                            },
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "2",
+                                                                "imageUrl": "${s3url}"
+                                                            },
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "3",
+                                                                "imageUrl": "${s3url}"
+                                                            },
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "4",
+                                                                "imageUrl": "${s3url}"
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "type": "Frame",
+                                                "width": "100vw",
+                                                "height": "45vh",
+                                                "backgroundColor": "white",
+                                                "items": [
+                                                    {
+                                                        "type": "Container",
+                                                        "direction": "row",
+                                                        "width": "100vw",
+                                                        "height": "45vh",
+                                                        "items": [
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "5",
+                                                                "imageUrl": "${s3url}"
+                                                            },
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "6",
+                                                                "imageUrl": "${s3url}"
+                                                            },
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "7",
+                                                                "imageUrl": "${s3url}"
+                                                            },
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "8",
+                                                                "imageUrl": "${s3url}"
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "type": "Frame",
+                                                "width": "100vw",
+                                                "height": "45vh",
+                                                "backgroundColor": "white",
+                                                "items": [
+                                                    {
+                                                        "type": "Container",
+                                                        "direction": "row",
+                                                        "width": "100vw",
+                                                        "height": "45vh",
+                                                        "items": [
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "9",
+                                                                "imageUrl": "${s3url}"
+                                                            },
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "10",
+                                                                "imageUrl": "${s3url}"
+                                                            },
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "11",
+                                                                "imageUrl": "${s3url}"
+                                                            },
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "12",
+                                                                "imageUrl": "${s3url}"
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "type": "Frame",
+                                                "width": "100vw",
+                                                "height": "45vh",
+                                                "backgroundColor": "white",
+                                                "items": [
+                                                    {
+                                                        "type": "Container",
+                                                        "direction": "row",
+                                                        "width": "100vw",
+                                                        "height": "45vh",
+                                                        "items": [
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "13",
+                                                                "imageUrl": "${s3url}"
+                                                            },
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "14",
+                                                                "imageUrl": "${s3url}"
+                                                            },
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "15",
+                                                                "imageUrl": "${s3url}"
+                                                            },
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "16",
+                                                                "imageUrl": "${s3url}"
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "type": "Frame",
+                                                "width": "100vw",
+                                                "height": "45vh",
+                                                "backgroundColor": "white",
+                                                "items": [
+                                                    {
+                                                        "type": "Container",
+                                                        "direction": "row",
+                                                        "width": "100vw",
+                                                        "height": "45vh",
+                                                        "items": [
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "17",
+                                                                "imageUrl": "${s3url}"
+                                                            },
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "18",
+                                                                "imageUrl": "${s3url}"
+                                                            },
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "19",
+                                                                "imageUrl": "${s3url}"
+                                                            },
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "20",
+                                                                "imageUrl": "${s3url}"
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "type": "Frame",
+                                                "width": "100vw",
+                                                "height": "45vh",
+                                                "backgroundColor": "white",
+                                                "items": [
+                                                    {
+                                                        "type": "Container",
+                                                        "direction": "row",
+                                                        "width": "100vw",
+                                                        "height": "45vh",
+                                                        "items": [
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "21",
+                                                                "imageUrl": "${s3url}"
+                                                            },
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "22",
+                                                                "imageUrl": "${s3url}"
+                                                            },
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "23",
+                                                                "imageUrl": "${s3url}"
+                                                            },
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "24",
+                                                                "imageUrl": "${s3url}"
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "type": "Frame",
+                                                "width": "100vw",
+                                                "height": "45vh",
+                                                "backgroundColor": "white",
+                                                "items": [
+                                                    {
+                                                        "type": "Container",
+                                                        "direction": "row",
+                                                        "width": "100vw",
+                                                        "height": "45vh",
+                                                        "items": [
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "25",
+                                                                "imageUrl": "${s3url}"
+                                                            },
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "26",
+                                                                "imageUrl": "${s3url}"
+                                                            },
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "27",
+                                                                "imageUrl": "${s3url}"
+                                                            },
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "28",
+                                                                "imageUrl": "${s3url}"
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "type": "Frame",
+                                                "width": "100vw",
+                                                "height": "45vh",
+                                                "backgroundColor": "white",
+                                                "items": [
+                                                    {
+                                                        "type": "Container",
+                                                        "direction": "row",
+                                                        "width": "100vw",
+                                                        "height": "45vh",
+                                                        "items": [
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "29",
+                                                                "imageUrl": "${s3url}"
+                                                            },
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "30",
+                                                                "imageUrl": "${s3url}"
+                                                            },
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "31",
+                                                                "imageUrl": "${s3url}"
+                                                            },
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "32",
+                                                                "imageUrl": "${s3url}"
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "type": "Frame",
+                                                "width": "100vw",
+                                                "height": "45vh",
+                                                "backgroundColor": "white",
+                                                "items": [
+                                                    {
+                                                        "type": "Container",
+                                                        "direction": "row",
+                                                        "width": "100vw",
+                                                        "height": "45vh",
+                                                        "items": [
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "33",
+                                                                "imageUrl": "${s3url}"
+                                                            },
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "34",
+                                                                "imageUrl": "${s3url}"
+                                                            },
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "35",
+                                                                "imageUrl": "${s3url}"
+                                                            },
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "36",
+                                                                "imageUrl": "${s3url}"
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "type": "Frame",
+                                                "width": "100vw",
+                                                "height": "45vh",
+                                                "backgroundColor": "white",
+                                                "items": [
+                                                    {
+                                                        "type": "Container",
+                                                        "direction": "row",
+                                                        "width": "100vw",
+                                                        "height": "45vh",
+                                                        "items": [
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "37",
+                                                                "imageUrl": "${s3url}"
+                                                            },
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "38",
+                                                                "imageUrl": "${s3url}"
+                                                            },
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "39",
+                                                                "imageUrl": "${s3url}"
+                                                            },
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "40",
+                                                                "imageUrl": "${s3url}"
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "type": "Frame",
+                                                "width": "100vw",
+                                                "height": "45vh",
+                                                "backgroundColor": "white",
+                                                "items": [
+                                                    {
+                                                        "type": "Container",
+                                                        "direction": "row",
+                                                        "width": "100vw",
+                                                        "height": "45vh",
+                                                        "items": [
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "41",
+                                                                "imageUrl": "${s3url}"
+                                                            },
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "42",
+                                                                "imageUrl": "${s3url}"
+                                                            },
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "43",
+                                                                "imageUrl": "${s3url}"
+                                                            },
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "44",
+                                                                "imageUrl": "${s3url}"
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "type": "Frame",
+                                                "width": "100vw",
+                                                "height": "45vh",
+                                                "backgroundColor": "white",
+                                                "items": [
+                                                    {
+                                                        "type": "Container",
+                                                        "direction": "row",
+                                                        "width": "100vw",
+                                                        "height": "45vh",
+                                                        "items": [
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "45",
+                                                                "imageUrl": "${s3url}"
+                                                            },
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "46",
+                                                                "imageUrl": "${s3url}"
+                                                            },
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "47",
+                                                                "imageUrl": "${s3url}"
+                                                            },
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "48",
+                                                                "imageUrl": "${s3url}"
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "type": "Frame",
+                                                "width": "100vw",
+                                                "height": "45vh",
+                                                "backgroundColor": "white",
+                                                "items": [
+                                                    {
+                                                        "type": "Container",
+                                                        "direction": "row",
+                                                        "width": "100vw",
+                                                        "height": "45vh",
+                                                        "items": [
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "49",
+                                                                "imageUrl": "${s3url}"
+                                                            },
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "50",
+                                                                "imageUrl": "${s3url}"
+                                                            },
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "51",
+                                                                "imageUrl": "${s3url}"
+                                                            },
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "52",
+                                                                "imageUrl": "${s3url}"
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "type": "Frame",
+                                                "width": "100vw",
+                                                "height": "45vh",
+                                                "backgroundColor": "white",
+                                                "items": [
+                                                    {
+                                                        "type": "Container",
+                                                        "direction": "row",
+                                                        "width": "100vw",
+                                                        "height": "45vh",
+                                                        "items": [
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "53",
+                                                                "imageUrl": "${s3url}"
+                                                            },
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "54",
+                                                                "imageUrl": "${s3url}"
+                                                            },
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "55",
+                                                                "imageUrl": "${s3url}"
+                                                            },
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "56",
+                                                                "imageUrl": "${s3url}"
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "type": "Frame",
+                                                "width": "100vw",
+                                                "height": "45vh",
+                                                "backgroundColor": "white",
+                                                "items": [
+                                                    {
+                                                        "type": "Container",
+                                                        "direction": "row",
+                                                        "width": "100vw",
+                                                        "height": "45vh",
+                                                        "items": [
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "57",
+                                                                "imageUrl": "${s3url}"
+                                                            },
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "58",
+                                                                "imageUrl": "${s3url}"
+                                                            },
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "59",
+                                                                "imageUrl": "${s3url}"
+                                                            },
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "60",
+                                                                "imageUrl": "${s3url}"
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "type": "Frame",
+                                                "width": "100vw",
+                                                "height": "45vh",
+                                                "backgroundColor": "white",
+                                                "items": [
+                                                    {
+                                                        "type": "Container",
+                                                        "direction": "row",
+                                                        "width": "100vw",
+                                                        "height": "45vh",
+                                                        "items": [
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "61",
+                                                                "imageUrl": "${s3url}"
+                                                            },
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "62",
+                                                                "imageUrl": "${s3url}"
+                                                            },
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "63",
+                                                                "imageUrl": "${s3url}"
+                                                            },
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "64",
+                                                                "imageUrl": "${s3url}"
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "type": "Frame",
+                                                "width": "100vw",
+                                                "height": "45vh",
+                                                "backgroundColor": "white",
+                                                "items": [
+                                                    {
+                                                        "type": "Container",
+                                                        "direction": "row",
+                                                        "width": "100vw",
+                                                        "height": "45vh",
+                                                        "items": [
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "65",
+                                                                "imageUrl": "${s3url}"
+                                                            },
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "66",
+                                                                "imageUrl": "${s3url}"
+                                                            },
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "67",
+                                                                "imageUrl": "${s3url}"
+                                                            },
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "68",
+                                                                "imageUrl": "${s3url}"
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "type": "Frame",
+                                                "width": "100vw",
+                                                "height": "45vh",
+                                                "backgroundColor": "white",
+                                                "items": [
+                                                    {
+                                                        "type": "Container",
+                                                        "direction": "row",
+                                                        "width": "100vw",
+                                                        "height": "45vh",
+                                                        "items": [
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "69",
+                                                                "imageUrl": "${s3url}"
+                                                            },
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "70",
+                                                                "imageUrl": "${s3url}"
+                                                            },
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "71",
+                                                                "imageUrl": "${s3url}"
+                                                            },
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "72",
+                                                                "imageUrl": "${s3url}"
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "type": "Frame",
+                                                "width": "100vw",
+                                                "height": "45vh",
+                                                "backgroundColor": "white",
+                                                "items": [
+                                                    {
+                                                        "type": "Container",
+                                                        "direction": "row",
+                                                        "width": "100vw",
+                                                        "height": "45vh",
+                                                        "items": [
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "73",
+                                                                "imageUrl": "${s3url}"
+                                                            },
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "74",
+                                                                "imageUrl": "${s3url}"
+                                                            },
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "75",
+                                                                "imageUrl": "${s3url}"
+                                                            },
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "76",
+                                                                "imageUrl": "${s3url}"
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "type": "Frame",
+                                                "width": "100vw",
+                                                "height": "45vh",
+                                                "backgroundColor": "white",
+                                                "items": [
+                                                    {
+                                                        "type": "Container",
+                                                        "direction": "row",
+                                                        "width": "100vw",
+                                                        "height": "45vh",
+                                                        "items": [
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "77",
+                                                                "imageUrl": "${s3url}"
+                                                            },
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "78",
+                                                                "imageUrl": "${s3url}"
+                                                            },
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "79",
+                                                                "imageUrl": "${s3url}"
+                                                            },
+                                                            {
+                                                                "type": "avatar",
+                                                                "number": "80",
+                                                                "imageUrl": "${s3url}"
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
